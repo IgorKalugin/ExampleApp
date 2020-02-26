@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ResourceDictionary xmlns="http://xamarin.com/schemas/2014/forms"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                    xmlns:effects="clr-namespace:Example.Effects;assembly=Example"
+                    x:Class="Example.Themes.MainTheme.Pages.ProfileCommon">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="../Fonts.xaml" />
+        <ResourceDictionary>
+            
+            <Style x:Key="ProfileContentStack" TargetType="StackLayout">
+                <Setter Property="Spacing" Value="10" />
+                <Setter Property="Padding" Value="32,0" />
+                <Setter Property="VerticalOptions" Value="Center" />
+            </Style>
+
+            <Style x:Key="MyLogoImage" TargetType="Image">
+                <Setter Property="Source" Value="login_logo" />
+                <Setter Property="HorizontalOptions" Value="Center" />
+                <Setter Property="WidthRequest" Value="184" />
+                <Setter Property="HeightRequest" Value="147.2" />
+                <Setter Property="Margin" Value="0,25" />
+            </Style>
+
+            <Style x:Key="ProfileTitleLabel" TargetType="Label">
+                <Setter Property="FontFamily" Value="{StaticResource SemiBoldFontFamily}" />
+                <Setter Property="FontSize" Value="12" />
+                <Setter Property="TextColor" Value="#698784" />
+            </Style>
+            
+            <Style x:Key="ProfileTitleSeparator" TargetType="BoxView">
+                <Setter Property="WidthRequest" Value="72" />
+                <Setter Property="HeightRequest" Value="2" />
+                <Setter Property="BackgroundColor" Value="#698784" />
+                <Setter Property="HorizontalOptions" Value="Start" />
+            </Style>
+            
+            <Style x:Key="ProfileEntry" TargetType="Entry">
+                <Setter Property="Visual" Value="Material" />
+                <Setter Property="FontFamily" Value="{StaticResource RegularFontFamily}" />
+                <Setter Property="FontSize" Value="16" />
+                <Setter Property="TextColor" Value="#666666" />
+            </Style>
+            
+            <Style x:Key="ProfileNameEntry" TargetType="Entry" BasedOn="{StaticResource ProfileEntry}">
+                <Setter Property="Placeholder" Value="Name" />
+            </Style>
+            
+            <Style x:Key="ProfileEmailEntry" TargetType="Entry" BasedOn="{StaticResource ProfileEntry}">
+                <Setter Property="Placeholder" Value="Email" />
+                <Setter Property="Keyboard" Value="Email" />
+            </Style>
+            
+            <Style x:Key="ProfilePasswordEntry" TargetType="Entry" BasedOn="{StaticResource ProfileEntry}">
+                <Setter Property="Placeholder" Value="Password" />
+                <Setter Property="IsPassword" Value="True" />
+            </Style>
+            
+            <Style x:Key="ProfileButton" TargetType="Button">
+                <Setter Property="HeightRequest" Value="50" />
+                <Setter Property="CornerRadius" Value="25" />
+                <Setter Property="BackgroundColor" Value="#6A8785" />
+                <Setter Property="FontFamily" Value="{StaticResource SemiBoldFontFamily}" />
+                <Setter Property="FontSize" Value="16" />
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="Margin" Value="32" />
+                <Setter Property="effects:DisabledButtonEffect.DisabledButtonTextColor" Value="DarkGray" />
+            </Style>
+            
+            <Style x:Key="ProfileSecondActionStack" TargetType="StackLayout">
+                <Setter Property="Orientation" Value="Horizontal" />
+                <Setter Property="HorizontalOptions" Value="Center" />
+            </Style>
+            
+            <Style x:Key="ProfileSecondActionDescriptionLabel" TargetType="Label">
+                <Setter Property="FontFamily" Value="{StaticResource SemiBoldFontFamily}" />
+                <Setter Property="FontSize" Value="12" />
+                <Setter Property="TextColor" Value="#757575" />
+            </Style>
+            
+            <Style x:Key="ProfileSecondActionLinkLabel" TargetType="Label">
+                <Setter Property="FontFamily" Value="{StaticResource SemiBoldFontFamily}" />
+                <Setter Property="FontSize" Value="12" />
+                <Setter Property="TextColor" Value="#698784" />
+                <Setter Property="TextDecorations" Value="Underline" />
+            </Style>
+            
+            <Style x:Key="ProfileErrorLabel" TargetType="Label">
+                <Setter Property="TextColor" Value="Crimson" />
+                <Setter Property="FontSize" Value="12" />
+                <Setter Property="FontFamily" Value="{StaticResource SemiBoldFontFamily}" />
+                <!-- we set error text to " " and not to string.Empty or null, otherwise its Height is 0 and when it appears everything goes up a little bit -->
+                <Setter Property="Text" Value=" " />
+            </Style>
+            
+        </ResourceDictionary>
+    </ResourceDictionary.MergedDictionaries>
+</ResourceDictionary>

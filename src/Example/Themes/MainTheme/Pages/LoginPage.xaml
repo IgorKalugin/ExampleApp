@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ResourceDictionary xmlns="http://xamarin.com/schemas/2014/forms"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                    xmlns:pages="clr-namespace:Example.Pages;assembly=Example"
+                    x:Class="Example.Themes.MainTheme.Pages.LoginPage">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="../Fonts.xaml" />
+        <ResourceDictionary Source="ProfileCommon.xaml" />
+        <ResourceDictionary>
+            
+            <Style TargetType="pages:LoginPage">
+                <Setter Property="NavigationPage.HasNavigationBar" Value="False" />
+            </Style>
+            
+            <Style x:Key="LoginTitleLabel" TargetType="Label" BasedOn="{StaticResource ProfileTitleLabel}">
+                <Setter Property="Text" Value="Welcome back!" />
+            </Style>
+            
+            <Style x:Key="LoginCreateButton" TargetType="Button" BasedOn="{StaticResource ProfileButton}">
+                <Setter Property="Text" Value="Login" />
+            </Style>
+            
+            <Style x:Key="LoginCreateProfileDescriptionLabel" TargetType="Label" BasedOn="{StaticResource ProfileSecondActionDescriptionLabel}">
+                <Setter Property="Text" Value="No account?" />
+            </Style>
+            
+            <Style x:Key="LoginCreateProfileLinkLabel" TargetType="Label" BasedOn="{StaticResource ProfileSecondActionLinkLabel}">
+                <Setter Property="Text" Value="Create a profile" />
+            </Style>
+            
+            <Style x:Key="LoginDescriptionLabel" TargetType="Label">
+                <Setter Property="FontFamily" Value="{StaticResource SemiBoldFontFamily}" />
+                <Setter Property="FontSize" Value="12" />
+                <Setter Property="TextColor" Value="Crimson" />
+            </Style>
+            
+        </ResourceDictionary>
+    </ResourceDictionary.MergedDictionaries>
+</ResourceDictionary>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ResourceDictionary xmlns="http://xamarin.com/schemas/2014/forms"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                    x:Class="Example.Themes.MainTheme.Pages.Common">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary>
+            <Color x:Key="CreateMedicineForMyselfBackgroundColor">#DBC4D2</Color>
+            <Color x:Key="CreateMedicineForSomeoneBackgroundColor">#685D7A</Color>
+            
+            <Style x:Key="CancelBlackBtn" TargetType="ImageButton">
+                <Setter Property="Source" Value="cancel_black" />
+                <Setter Property="HorizontalOptions" Value="End" />
+                <Setter Property="WidthRequest" Value="30" />
+                <Setter Property="HeightRequest" Value="30" />
+                <Setter Property="Padding" Value="3" />
+                <Setter Property="BackgroundColor" Value="Transparent" />
+            </Style>
+            
+            <Style x:Key="LogoImage" TargetType="Image">
+                <Setter Property="Source" Value="Example_logo" />
+                <Setter Property="HorizontalOptions" Value="Center" />
+                <Setter Property="WidthRequest" Value="84" />
+                <Setter Property="HeightRequest" Value="47.2" />
+                <Setter Property="Margin" Value="0,25" />
+            </Style>
+        </ResourceDictionary>
+    </ResourceDictionary.MergedDictionaries>
+</ResourceDictionary>

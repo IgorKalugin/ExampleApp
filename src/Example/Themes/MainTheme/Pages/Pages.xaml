@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ResourceDictionary xmlns="http://xamarin.com/schemas/2014/forms"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                    x:Class="Example.Themes.MainTheme.Pages.Pages">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="CreateProfilePage.xaml" />
+        <ResourceDictionary Source="LoginPage.xaml" />
+        <ResourceDictionary Source="WebPage.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+</ResourceDictionary>

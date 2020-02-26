@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<reactiveui:ReactiveContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:reactiveui="clr-namespace:ReactiveUI.XamForms;assembly=ReactiveUI.XamForms"
+             xmlns:controls="clr-namespace:Example.Controls;assembly=Example"
+             xmlns:profileVm="clr-namespace:Example.ViewModels.Pages.Profile;assembly=Example"
+             x:Class="Example.Pages.CreateProfilePage"
+             x:TypeArguments="profileVm:CreateProfileViewModel">
+    <Grid>
+        <Grid.RowDefinitions>
+            <!-- status bar -->
+            <RowDefinition Height="Auto" />
+            <!-- logo -->
+            <RowDefinition Height="Auto" />
+            <!-- content -->
+            <RowDefinition Height="*" />
+            <!-- button -->
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        
+        <!-- status bar -->
+        <controls:StatusBar Grid.Row="0" />
+        
+        <!-- logo -->
+        <Image Grid.Row="1" Style="{StaticResource MyLogoImage}" /> 
+        
+        <!-- content -->
+        <StackLayout Grid.Row="2" Style="{StaticResource ProfileContentStack}">
+            <!-- login -->
+            <StackLayout Style="{StaticResource ProfileSecondActionStack}">
+                <StackLayout.GestureRecognizers>
+                    <TapGestureRecognizer x:Name="loginTgr" />
+                </StackLayout.GestureRecognizers>
+                <Label Style="{StaticResource CreateProfileLoginDescriptionLabel}" />
+                <Label Style="{StaticResource CreateProfileLoginLinkLabel}" />
+            </StackLayout>
+            <!-- title -->
+            <Label Style="{StaticResource CreateProfileTitleLabel}" />
+            <!-- separator -->
+            <BoxView Style="{StaticResource ProfileTitleSeparator}"/>
+            <!-- name -->
+            <Entry x:Name="nameEntry" Style="{StaticResource ProfileNameEntry}" />
+            <!-- email -->
+            <Entry x:Name="emailEntry" Style="{StaticResource ProfileEmailEntry}" />
+            <!-- password -->
+            <Entry x:Name="passwordEntry" Style="{StaticResource ProfilePasswordEntry}" />
+            <!-- user terms -->
+            <StackLayout Style="{StaticResource CreateProfileCheckboxStack}">
+                <CheckBox x:Name="userTermsCheckBox" Style="{StaticResource CreateProfileCheckbox}" />
+                <Label Style="{StaticResource CreateProfileCheckBoxLabel}">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Style="{StaticResource CreateProfileUserTermsDescriptionSpan}" />
+                            <Span Style="{StaticResource CreateProfileUserTermsLinkSpan}" >
+                                <Span.GestureRecognizers>
+                                    <TapGestureRecognizer x:Name="showUserTermsTgr" />
+                                </Span.GestureRecognizers>
+                            </Span> 
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </StackLayout>
+            <!-- privacy policy -->
+            <StackLayout Style="{StaticResource CreateProfileCheckboxStack}">
+                <CheckBox x:Name="privacyPolicyCheckBox" Style="{StaticResource CreateProfileCheckbox}" />
+                <Label Style="{StaticResource CreateProfileCheckBoxLabel}">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Style="{StaticResource CreateProfilePrivacyPolicyDescriptionHeadSpan}" />
+                            <Span Style="{StaticResource CreateProfilePrivacyPolicyLinkSpan}" >
+                                <Span.GestureRecognizers>
+                                    <TapGestureRecognizer x:Name="showPrivacyPolicyTgr" />
+                                </Span.GestureRecognizers>
+                            </Span>
+                            <Span Style="{StaticResource CreateProfilePrivacyPolicyDescriptionTailSpan}" /> 
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </StackLayout>
+            <!-- spinner -->
+            <controls:Spinner x:Name="spinner" />
+            <!-- errors -->
+            <Label x:Name="errorLabel" Style="{StaticResource ProfileErrorLabel}" />
+        </StackLayout>
+        
+        <!-- button -->
+        <Button Grid.Row="3" x:Name="createBtn" Style="{StaticResource CreateProfileCreateButton}" />
+    </Grid>
+</reactiveui:ReactiveContentPage>

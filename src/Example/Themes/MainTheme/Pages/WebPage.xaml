@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ResourceDictionary xmlns="http://xamarin.com/schemas/2014/forms"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                    xmlns:pages="clr-namespace:Example.Pages;assembly=Example"
+                    x:Class="Example.Themes.MainTheme.Pages.WebPage">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="../Fonts.xaml" />
+        <ResourceDictionary>
+            
+            <Style TargetType="pages:WebPage">
+                <Setter Property="NavigationPage.HasNavigationBar" Value="False" />
+            </Style>
+            
+            <Style x:Key="WebPageBackBtn" TargetType="ImageButton">
+                <Setter Property="Source" Value="arrow_left_black" />
+                <Setter Property="BackgroundColor" Value="Transparent" />
+                <Setter Property="WidthRequest" Value="24" />
+                <Setter Property="HeightRequest" Value="24" />
+                <Setter Property="HorizontalOptions" Value="Start" />
+                <Setter Property="Margin" Value="16,0" />
+            </Style>
+            
+        </ResourceDictionary>
+    </ResourceDictionary.MergedDictionaries>
+</ResourceDictionary>

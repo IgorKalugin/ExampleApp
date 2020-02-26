@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ResourceDictionary xmlns="http://xamarin.com/schemas/2014/forms"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                    xmlns:pages="clr-namespace:Example.Pages;assembly=Example"
+                    x:Class="Example.Themes.MainTheme.Pages.CreateProfilePage">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="../Fonts.xaml" />
+        <ResourceDictionary Source="ProfileCommon.xaml" />
+        <ResourceDictionary>
+            
+            <Style TargetType="pages:CreateProfilePage">
+                <Setter Property="NavigationPage.HasNavigationBar" Value="False" />
+            </Style>
+            
+            <Style x:Key="CreateProfileTitleLabel" TargetType="Label" BasedOn="{StaticResource ProfileTitleLabel}">
+                <Setter Property="Text" Value="Create a profile" />
+            </Style>
+            
+            <Style x:Key="CreateProfileCreateButton" TargetType="Button" BasedOn="{StaticResource ProfileButton}">
+                <Setter Property="Text" Value="Create profile" />
+            </Style>
+            
+            <Style x:Key="CreateProfileLoginDescriptionLabel" TargetType="Label" BasedOn="{StaticResource ProfileSecondActionDescriptionLabel}">
+                <Setter Property="Text" Value="I already have an account." />
+            </Style>
+            
+            <Style x:Key="CreateProfileLoginLinkLabel" TargetType="Label" BasedOn="{StaticResource ProfileSecondActionLinkLabel}">
+                <Setter Property="Text" Value="Login" />
+            </Style>
+            
+            <Style x:Key="CreateProfileCheckboxStack" TargetType="StackLayout">
+                <Setter Property="Orientation" Value="Horizontal" />
+            </Style>
+            
+            <Style x:Key="CreateProfileCheckbox" TargetType="CheckBox">
+                <Setter Property="Color" Value="#6A8785" />
+                <Setter Property="VerticalOptions" Value="Center" />
+                <Setter Property="HeightRequest" Value="24" />
+            </Style>
+            
+            <Style x:Key="CreateProfileCheckBoxLabel" TargetType="Label">
+                <Setter Property="FontFamily" Value="{StaticResource RegularFontFamily}" />
+                <Setter Property="FontSize" Value="12" />
+            </Style>
+            
+            <Style x:Key="CreateProfileCheckBoxLinkSpan" TargetType="Span">
+                <Setter Property="TextColor" Value="#6A8785" />
+                <Setter Property="TextDecorations" Value="Underline" />
+                <Setter Property="FontFamily" Value="{StaticResource SemiBoldFontFamily}" />
+                <Setter Property="FontSize" Value="12" />
+            </Style>
+            
+            <!-- user terms -->
+            <Style x:Key="CreateProfileUserTermsDescriptionSpan" TargetType="Span">
+                <Setter Property="Text" Value="I have read and accept the " />
+            </Style>
+            
+            <Style x:Key="CreateProfileUserTermsLinkSpan" TargetType="Span" BasedOn="{StaticResource CreateProfileCheckBoxLinkSpan}">
+                <Setter Property="Text" Value="User Terms" />
+            </Style>
+            
+            <!-- privacy policy -->
+            <Style x:Key="CreateProfilePrivacyPolicyDescriptionHeadSpan" TargetType="Span">
+                <Setter Property="Text" Value="I have read and I accept " />
+            </Style>
+            
+            <Style x:Key="CreateProfilePrivacyPolicyLinkSpan" TargetType="Span" BasedOn="{StaticResource CreateProfileCheckBoxLinkSpan}">
+                <Setter Property="Text" Value="PillExample’s Privacy Policy. " />
+            </Style>
+            
+            <Style x:Key="CreateProfilePrivacyPolicyDescriptionTailSpan" TargetType="Span">
+                <Setter Property="Text" Value="I hereby confirm that I consent to PillExample’s processing of my personal data in accordance with the Privacy Policy" />
+            </Style>
+            
+        </ResourceDictionary>
+    </ResourceDictionary.MergedDictionaries>
+</ResourceDictionary>
