@@ -14,8 +14,8 @@ namespace Example.Droid
     {
         protected override void OnCreate(Bundle savedInstanceState)
         {
-            TabLayoutResource = Resource.Layout.Tabbar;
-            ToolbarResource = Resource.Layout.Toolbar;
+            // TabLayoutResource = Resource.Layout.Tabbar;
+            // ToolbarResource = Resource.Layout.Toolbar;
             
             Plugin.CurrentActivity.CrossCurrentActivity.Current.Init(this, savedInstanceState);
 

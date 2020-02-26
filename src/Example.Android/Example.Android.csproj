@@ -83,8 +83,6 @@
     <PackageReference Include="Xamarin.GooglePlayServices.Location" Version="71.1600.0" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controls\SentenceFormsEditText.cs" />
-    <Compile Include="Controls\SentencePickerEditText.cs" />
     <Compile Include="Services\FirebaseAnalyticsServiceDroid.cs" />
     <Compile Include="SplashScreenActivity.cs" />
     <Compile Include="MainActivity.cs" />
@@ -126,12 +124,6 @@
     <AndroidResource Include="Resources\drawable\spinner.xml" />
     <AndroidResource Include="Resources\drawable\no_medications.xml" />
     <AndroidResource Include="Resources\drawable\medbox_checkbox.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Example\Example.csproj">
-      <Project>{BF4E66A9-E89E-48B8-B3FA-E8DF737C4FDB}</Project>
-      <Name>Dose</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\values\strings.xml" />
@@ -190,6 +182,7 @@
     <AndroidAsset Include="Assets\test_page.htm" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Controls\" />
     <Folder Include="Resources\mipmap-anydpi-v26\" />
     <Folder Include="Resources\mipmap-hdpi\" />
     <Folder Include="Resources\mipmap-mdpi\" />
@@ -198,6 +191,12 @@
     <Folder Include="Resources\mipmap-xxxhdpi\" />
     <Folder Include="Resources\raw\" />
     <Folder Include="Resources\values-land\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Example\Example.csproj">
+      <Project>{bf4e66a9-e89e-48b8-b3fa-e8df737c4fdb}</Project>
+      <Name>Example</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>
